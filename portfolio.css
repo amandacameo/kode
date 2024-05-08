@@ -1,0 +1,103 @@
+/* Basisindstillinger: Nulstiller margin og sætter box-sizing for alle elementer */
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Body stilarter: Definerer baggrund, størrelse og overgangseffekter for hele siden */
+body {
+    background-color: #FFFBF9; /* Min bagrundsfarve*/
+    margin: 0;
+    height: 100vh;
+    transition: transform 0.5s ease;
+}
+
+/* Header stilarter: Indstiller bredden og padding for header-elementet */
+header {
+    width: 100%;
+    padding: 50px 40px;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    margin: 0; 
+    transition: transform 0.5s ease;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Sikrer at billedet er bag alt andet indhold i containeren */
+}
+
+header .logo {
+    height: 100px; /* Justér højden efter behov */
+    position: absolute;
+    left: 40px; /* Afstand fra venstre side */
+    top: 50px; /* Afstand fra toppen */
+    }
+nav {
+    margin-right: 5%;
+
+}
+/* Navigation container: Styler hvordan navigationslinksene vises, uden listepunkter og justeret til højre */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Så de ikke hænger sammen, men er adskilt, og hvor meget mellemrum der er imellem hver */
+nav li {
+    margin-left: 60px;
+}
+
+/* Navigation links: Definerer udseendet og positioneringen af navigationslinks */
+nav a {
+    text-decoration: none;
+    color: #1400AE;
+    font-size: 22px;
+    position: relative;
+}
+
+/* Hover-effekt for navigation links: Skaber en understregningsbar der vises når linket hoveres over */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left:0;
+    width: 0;
+    height: 5px;
+    background-color: #FFFBF9;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Farveændring ved hover: Holder linkets farve konsekvent ved hover */
+nav a:hover {
+    color: #1400AE;
+}
+
+/* Glidende understregningseffekt ved hover: Udvider understregningsbaren til fuld bredde */
+nav a:hover::after {
+    width: 100%;
+}
+
+.text-content {
+    position: absolute;
+    top: 50%; /* Centrerer teksten vertikalt */
+    left: 50%; /* Centrerer teksten horisontalt */
+    transform: translate(-50%, -50%); /* Finjusterer placeringen for nøjagtig centrering */
+    color: white; /* Tilpas efter din farvepræference */
+    text-align: center; /* Sikrer at teksten er centreret */
+    z-index: 10; /* Sikrer at teksten er foran baggrundsbilledet */
+}
+
+
+/* Skrifttype stilarter: Sætter fonten og vægten for elementer med klassen .readex-pro */
+.readex-pro {
+    font-family: "Readex Pro", sans-serif;
+    font-weight: 300;
+}
+
