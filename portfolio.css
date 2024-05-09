@@ -33,12 +33,9 @@ header {
 
 @media only screen and (max-width: 768px) { 
     .background-image {
-        object-position: top 0 left -100px; 
+        object-position: top 0 left -90px; 
         object-fit: cover;
         
-    }
-    .side-nav{
-        display: none;
     }
 }
 
@@ -94,29 +91,50 @@ header .logo {
     width: 100%;
 }
 
-.side-nav {
-    position: absolute;
-    background-color: #fffbf978;
-    right: 0;
-    height: 100vh;
-    top:0;
-}
-
-.side-nav ul {
-    list-style:none;
-}
-
-.side-nav li {
-    margin-bottom: 60px;
-    margin-top: 60px;
-    margin-right: 30px;
-}
 .text-content { /*min titel "amanda cameo"*/
-    font-size: 3vw;
+    font-size: 50px;
     top: 25%; 
-    width: 100%; /* Finjusterer placeringen for nøjagtig centrering */
-    color: #1400AE; 
+    width: 88%; 
+    margin-left: 12%;
+}
 
+.text-content h1 {
+    color: #1400AE; 
+}
+
+.text-content h2 {
+    color: #FFFBF9;
+    font-weight: 350;
+}
+
+.portfolio h1 {
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 800px;
+    color:#1400AE;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+.portfolio p {
+    color: #1400AE;
+    font-weight: 200;
+    font-size: 25px;
+    margin-left: 0;
+    width: 600px;
+}
+
+.portfolio {
+    text-align: right;
+    width: 00px;
+    margin-left: auto;
+    margin-right: 33px;
+    margin-top: 70px;
+    border-right: 1px solid #1400AE; /*stregen ved højre side*/
+    padding-right: 10px;
+    padding-top: 1px;
 }
 
 .header-container {
@@ -126,39 +144,77 @@ header .logo {
     height: 75px;
     margin-top:2.5% ;
     margin-left: 2.5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width: 90%;
 }
 
-.burger-menu {
-    width: 50px;
-    height: 50px;
-    left: 2%;
-    display:none;
-}
 
 @media only screen and (max-width: 768px) { 
-    .side-nav{
-        display: block;
-    
-       }
-    .top-nav {
-    display:none;
 
-   }
+    .top-nav a {
+        font-size: 15px !important;
+    }
+
+    .top-nav li {
+        margin-left:20px;
+    }
+
+    .top-nav ul {
+        padding-left:0;
+    }
 
    .burger-menu{
     display:block;
    }
+
    .logo {
     height:50px !important;
     margin-top: 10px;
     margin-left: 10px;
    }
+   
    .header-container{
     align-items: center;
+    margin-bottom: 25%;
    }
 
+   .text-content h1 {
+    font-size: 40px;
+   }
+
+   .text-content h2 {
+    font-size: 25px;
+   }
+
+   .portfolio {
+    text-align: right;
+    width: 400px;
+    margin-left: auto;
+    margin-right: 33px;
+    margin-top: 70px;
+    border-right: 1px solid #1400AE; /*stregen ved højre side*/
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom:15px;
+    }
+    .portfolio h1 {
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 7px;
+        width: 200px;
+        color: #FFFBF9;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .portfolio p {
+        color: #1400AE;
+        margin-right:0;
+        margin-left:auto;
+        font-weight: 300;
+        font-size: 15px;
+        width: 350px;
+    }
 }
 
 
@@ -170,5 +226,6 @@ header .logo {
 
 .montserrat {
     font-family: "Montserrat";
+    font-weight: bold;
 }
 
