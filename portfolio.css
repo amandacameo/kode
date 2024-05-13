@@ -1,18 +1,19 @@
-/* Basisindstillinger: Nulstiller margin og sætter box-sizing for alle elementer */
+
 * {
     margin: 0px;
     box-sizing: border-box;
 }
 
-/* Body stilarter: Definerer baggrund, størrelse og overgangseffekter for hele siden */
+/* Definerer baggrund, størrelse og overgangseffekter for hele siden */
 body {
     background-color: #FFFBF9; /* Min bagrundsfarve*/
     margin: 0;
+    padding:0;
     height: 100vh;
     transition: transform 0.5s ease;
 }
 
-/* Header stilarter: Indstiller bredden og padding for header-elementet */
+/* Indstiller bredden og padding for header-elementet */
 header {
     width: 100%;
     background-size: cover;
@@ -31,7 +32,8 @@ header {
     z-index: -1; /* Sikrer at billedet er bag alt andet indhold i containeren */
 }
 
-@media only screen and (max-width: 768px) { 
+/* mit gradient design som flytter sig til ventre hjørne når den er i mobil størrelse */
+@media only screen and (max-width: 768px)  { 
     .background-image {
         object-position: top 0 left -90px; 
         object-fit: cover;
@@ -42,27 +44,37 @@ header {
 header .logo {
     height: 100px;
     width:auto; /* Justér højden efter behov */
-/* Afstand fra toppen */
+    margin-top: 40px;
+    margin-left: 40px;
     }
 
-.top-nav {
-    margin-right: 5%;
-
+.menu {
+    margin-right: 10%;
 }
-/* Navigation container: Styler hvordan navigationslinksene vises, uden listepunkter og justeret til højre */
-.top-nav ul {
+
+/*min menu linje og logo som aligner*/
+.header-container{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Styler hvordan navigationslinksene vises, uden listepunkter og justeret til højre */
+.menu ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
 }
 
-/* Så de ikke hænger sammen, men er adskilt, og hvor meget mellemrum der er imellem hver */
-.top-nav li {
-    margin-left: 60px;
+/* hvor meget mellemrum der er imellem hver */
+.menu li {
+    margin-left: 40px;
 }
 
-/* Navigation links: Definerer udseendet og positioneringen af navigationslinks */
-.top-nav a, .side-nav a {
+.menu a {
     text-decoration: none;
     color: #1400AE;
     font-size: 22px;
@@ -70,7 +82,7 @@ header .logo {
 }
 
 /* Hover-effekt for navigation links: Skaber en understregningsbar der vises når linket hoveres over */
-.top-nav a::after {
+.menu a::after {
     content: '';
     position: absolute;
     bottom: -6px;
@@ -82,122 +94,296 @@ header .logo {
 }
 
 /* Farveændring ved hover: Holder linkets farve konsekvent ved hover */
-.top-nav a:hover {
+.menu a:hover {
     color: #1400AE;
 }
 
 /* Glidende understregningseffekt ved hover */
-.top-nav a:hover::after {
+.menu a:hover::after {
     width: 100%;
 }
 
-.text-content { /*min titel "amanda cameo"*/
-    font-size: 50px;
-    top: 25%; 
-    width: 88%; 
-    margin-left: 12%;
+.header-title { 
+    margin-top: 100px;
+    margin-left: 90px;
+    width: 90%;
+    border-left: 3px solid #1400AE; /*stregen ved venstre side*/
+    padding-left: 40px;
+    padding-top: 4px;
+    padding-bottom: 15px;
 }
+    /*min titel "amanda cameo"*/ 
+    .header-title h1 {
+        font-size: 100px;
+        top: 25%; 
+        color: #1400AE; 
+    }
+        /*min titel "multimediedesigner"*/ 
+        .header-title h2 {
+            color: #FFFBF9;
+            font-weight: 350;
+            margin-left: auto;
+            margin-right: 150px;
+            font-size: 50px;
+        }
 
-.text-content h1 {
-    color: #1400AE; 
-}
-
-.text-content h2 {
-    color: #FFFBF9;
-    font-weight: 350;
-}
-
-.portfolio h1 {
-    margin-left: auto;
-    margin-right: 0;
-    margin-bottom: 40px;
-    width: 800px;
-    color:#1400AE;
-    font-size: 35px;
-    font-weight: 700;
-}
-
-
-.portfolio p {
-    color: #1400AE;
-    font-weight: 200;
-    font-size: 25px;
-    margin-left: 0;
-    width: 600px;
-}
-
-.portfolio {
+.velkommen-tekst {
     text-align: right;
-    width: 00px;
     margin-left: auto;
     margin-right: 33px;
-    margin-top: 70px;
-    border-right: 1px solid #1400AE; /*stregen ved højre side*/
-    padding-right: 10px;
-    padding-top: 1px;
+    margin-top: 100px;
+    border-right: 3px solid #1400AE; /*stregen ved højre side*/
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.header-container {
-    display:flex;
-    flex-direction: row;
-   justify-content: space-between; 
-    height: 75px;
-    margin-top:2.5% ;
-    margin-left: 2.5%;
-    margin-bottom: 5%;
-    width: 90%;
+    /*min titel "Velkommen til min portfolio! "*/ 
+    .velkommen-tekst h1 {
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 60px;
+        width: 700px;
+        color: #1400AE;
+        font-size: 40px;
+        font-weight: 700;
+    }
+        /*min titel "Jeg er din nye magiker designer..."*/ 
+        .velkommen-tekst p {
+            color: #1400AE;
+            margin-right:0;
+            margin-left:auto;
+            font-weight: 300;
+            font-size: 25px;
+            width: 700px;
+        }
+
+
+/*lilla kasse"*/ 
+.om-mig-text {
+    position: relative;
+    top: 300px;
+    width: 60%;
+    background-color: #9991FE;
+    border-radius: 20px;
+    margin-left: 20%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-top: 40px;
+    z-index: 1;
+    /* skygge rundt om hele boksen */
+    box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5); 
 }
 
-
-@media only screen and (max-width: 768px) { 
-
-    .top-nav a {
-        font-size: 15px !important;
+    /*hvem er jeg?*/ 
+    .om-mig-text h3 {
+        text-align:left;
+        font-size: 35px;
+        color: #1400AE;
+        margin-bottom: 30px;
+        margin-left: 150px;
     }
 
-    .top-nav li {
+        /*teksten*/ 
+        .om-mig-text {
+            font-size: 20px;
+            font-weight: 200px;
+            line-height: 45px;
+            color: #FFFBF9;
+        }
+
+.om-mig-billede {
+    z-index: 2;
+    position: absolute;
+    left: 300px;
+    margin-top: -400px;
+    overflow: hidden;
+    width: 300px; /* Øget fra 225px */
+    height: 300px; /* Øget fra 225px */
+    border-radius: 50%;
+}
+
+    .om-mig-billede img {
+        width: 500px; /* Øget fra 400px */
+        height: 500px; /* Øget fra 400px */
+        object-position: bottom 100px right 80px;
+        object-fit: cover;
+        transform: scale(1);
+    }
+
+/*selve listen*/
+.om-mig-liste {
+    width: 60%;
+    margin-left:20%;
+    margin-right:20%;
+    padding-left: 50px;
+    margin-top: 400px;
+    line-height: 50px;
+}
+
+    /*fjerner prikkerne*/
+    .om-mig-liste ul {
+        padding:0;
+        list-style-type: none;
+    }
+
+        .om-mig-liste li {
+            font-size: 25px;
+            color: #1400AE;
+            font-weight: 300;
+        }
+
+            .om-mig-liste li::before {
+                content: "";
+                border-color: transparent #FFB7FD;
+                border-style: solid;
+                border-width: 0.50em 0 0.50em 0.95em;
+                display: block;
+                height: 0;
+                width: 0;
+                left: -2em;
+                top: 1.5em;
+                position: relative;
+            }
+
+.mine-kompetencer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 150px;
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    background-image: url("farve\ kasse.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20%;
+     /* skygge rundt om hele boksen */
+     box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5); 
+}
+
+.mine-kompetencer h3 {
+    font-size: 50px;
+    color: #1400AE;
+}
+
+.k-kasser {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    overflow: hidden;
+    }
+
+
+    
+    .flex-item {
+        flex:40px;
+        display: flex;
+        margin-left:5px;
+        margin-right:5px;
+        flex-direction: column;
+        height: 100px; 
+        background-color:#fffbf9a0; 
+        border-radius: 10px;
+      }
+    
+      .flex-item .flex-item-header {
+      }
+
+    .projekter{
+        font-size: 30px;
+        color: #1400AE;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .projekter .projekter-title {
+        text-align: center;
+    }
+
+    .left.project {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Sørger for, at elementerne centreret i containeren */
+        padding: 10px 0; /* Tilføjer lidt vertikal polstring til containeren */
+    }
+    
+    .surt-show {
+        height: 875px;
+        margin-right: 100px;
+    }
+    
+    .project-text.project-text-left {
+        max-width: 80%; /* Begrænser tekstdelens maksimale bredde */
+        text-align: left; /* Sikrer at teksten starter fra venstre kant af dens container */
+    }
+    
+    
+
+
+/* Mobil størrelse indhold */
+@media only screen and (max-width: 900px) { 
+
+    body {
+        background-color: #FFFBF9; /* Min bagrundsfarve*/
+    } 
+    
+        .menu a {
+        font-size: 18px !important;
+    }
+
+    .menu li {
         margin-left:20px;
     }
 
-    .top-nav ul {
+    .menu ul {
         padding-left:0;
     }
 
-   .burger-menu{
-    display:block;
-   }
-
    .logo {
-    height:50px !important;
-    margin-top: 10px;
+    height:70px !important;
+    margin-top: 10px !important;
     margin-left: 10px;
    }
-   
-   .header-container{
-    align-items: center;
-    margin-bottom: 25%;
-   }
+ 
+   .header-title {
+    margin-left: 80px;
+    width: 500px;
+    margin-top: 80px;
+    margin-bottom: 150px;
 
-   .text-content h1 {
-    font-size: 40px;
-   }
+}
 
-   .text-content h2 {
-    font-size: 25px;
-   }
-
-   .portfolio {
-    text-align: right;
-    width: 400px;
+  /*Amanda cameo*/
+ .header-title h1 {
+    color: #1400AE;
+    font-size: 50px;
+    margin-right: auto;
+}
+  /*Multimediedesigner*/
+ .header-title h2 {
+    font-size: 30px;
+    color: #FFFBF9;
+    font-weight: 350;
     margin-left: auto;
+
+}
+
+   .velkommen-tekst {
+    text-align: right;
+    width: 450px;
     margin-right: 33px;
-    margin-top: 70px;
-    border-right: 1px solid #1400AE; /*stregen ved højre side*/
+    margin-left: auto;
+    margin-top: auto;
+    border-right: 3px solid #1400AE;
     padding-right: 10px;
-    padding-top: 15px;
-    padding-bottom:15px;
+    padding-top: 30px;
+    padding-bottom: 60px;
     }
-    .portfolio h1 {
+
+    .velkommen-tekst h1 {
         margin-left: auto;
         margin-right: 0;
         margin-bottom: 7px;
@@ -207,15 +393,139 @@ header .logo {
         font-weight: 700;
     }
 
-    .portfolio p {
+    .velkommen-tekst p {
         color: #1400AE;
         margin-right:0;
         margin-left:auto;
         font-weight: 300;
         font-size: 15px;
-        width: 350px;
+        width: 400px;
     }
+
+    /*lilla kasse"*/ 
+.om-mig-text {
+    position: relative;
+    top: 100px;
+    width: 500px;
+    background-color: #9991FE;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    margin-left: 50px;
+    /* skygge rundt om hele boksen */
+    box-shadow:0 0 20px 5px rgba(128, 128, 128, 0.5); 
 }
+
+/*hvem er jeg?*/ 
+.om-mig-text h3 {
+    text-align: left;
+    font-size: 35px;
+    color: #1400AE;
+    margin-bottom: 30px;
+    padding-left: 0px;
+}
+
+/*teksten*/ 
+.om-mig-text {
+    font-size: 20px;
+    font-weight: 200px;
+    line-height: 45px;
+    color: #FFFBF9;
+    text-align:left;
+}
+
+.om-mig-billede {
+    z-index: 2;
+    position: absolute;
+    left: 10px;
+    margin-top: -830px;
+    overflow: hidden;
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+}
+
+.om-mig-billede img {
+    width: 400px;
+    height: 400px;
+    object-position: bottom 100px right 80px;
+    object-fit: cover;
+    transform: scale(1);
+}
+
+/*fjerner prikkerne*/
+.om-mig-liste ul {
+    list-style-type: none;
+}
+
+/*selve listen*/
+.om-mig-liste {
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 150px;
+    line-height: 30px;
+}
+
+.om-mig-liste li {
+    font-size: 17px;
+    color: #1400AE;
+    font-weight: 300;
+}
+/*pile*/
+.om-mig-liste li::before {
+    content: "";
+    border-color: transparent #FFB7FD;
+    border-style: solid;
+    border-width: 0.70em 0 0.70em 1.3em;
+    height: 0;
+    width: 0;
+    left: -2em;
+    top: 1.5em;
+    position: relative;
+}
+
+.mine-kompetencer {
+    margin-top: 100px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-image: url("farve\ kasse.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+     /* skygge rundt om hele boksen */
+     box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5); 
+}
+
+.mine-kompetencer h3 {
+    font-size: 25px;
+    color: #1400AE;
+}
+
+.flex-item {
+    margin: 10px; 
+    background-color: #fffbf9a0; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 10px;
+  }
+
+  .projekter{
+    text-align:left;
+        font-size: 30px;
+        color: #1400AE;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: 200px;
+    }
+
+
+
+
+}
+
 
 
 /* Skrifttype stilarter: Sætter fonten og vægten for elementer med klassen .readex-pro */
@@ -227,5 +537,6 @@ header .logo {
 .montserrat {
     font-family: "Montserrat";
     font-weight: bold;
+    color: #1400AE;
 }
 
