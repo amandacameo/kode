@@ -130,7 +130,7 @@ header .logo {
 .velkommen-tekst {
     text-align: right;
     margin-left: auto;
-    margin-right: 33px;
+    margin-right: 30px;
     margin-top: 100px;
     border-right: 3px solid #1400AE; /*stregen ved højre side*/
     padding-right: 40px;
@@ -177,12 +177,12 @@ header .logo {
 }
 
     /*hvem er jeg?*/ 
-    .om-mig-text h3 {
+    .om-mig-text h2 {
         text-align:left;
         font-size: 35px;
         color: #1400AE;
         margin-bottom: 30px;
-        margin-left: 150px;
+        margin-left: 200px;
     }
 
         /*teksten*/ 
@@ -245,14 +245,28 @@ header .logo {
                 left: -2em;
                 top: 1.5em;
                 position: relative;
-            }
+ }
 
+  
+ /*mine kompetencer*/
+ .flex-item {
+flex:35px;
+display: flex;
+margin-left:10px;
+margin-right:10px;
+flex-direction: column;
+height: 250px; 
+background-color:#fffbf9a0; 
+border-radius: 20px;
+      }
+
+                
+ /*mine kompetencer baggrunden*/
 .mine-kompetencer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top: 150px;
-    padding-top: 30px;
     text-align: center;
     width: 100%;
     height: 400px;
@@ -264,10 +278,12 @@ header .logo {
      box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5); 
 }
 
-.mine-kompetencer h3 {
-    font-size: 50px;
+.mine-kompetencer h2 {
+    font-size: 40px;
     color: #1400AE;
+    margin-top: 10px;
 }
+
 
 .k-kasser {
     display: flex; 
@@ -277,48 +293,106 @@ header .logo {
     }
 
 
-    
-    .flex-item {
-        flex:40px;
-        display: flex;
-        margin-left:5px;
-        margin-right:5px;
-        flex-direction: column;
-        height: 100px; 
-        background-color:#fffbf9a0; 
-        border-radius: 10px;
-      }
-    
-      .flex-item .flex-item-header {
-      }
+ /*overskrift i kasserne*/
+  .flex-item h3{
+    font-size: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
 
+/*teksten i kasserne*/
+  .flex-item p{
+    font-size: 25px;
+    color: #1400AE;
+    padding-left: 5%;
+    padding-right: 5px;
+  }
+
+      /*overskrifter til bokse*/
     .projekter{
-        font-size: 30px;
+        font-size: 35px;
         color: #1400AE;
         margin-top: 50px;
         margin-bottom: 30px;
     }
 
-    .projekter .projekter-title {
+    .værktøjer-billeder img {
+        display: inline-block; 
+        width: 120px;
+        margin-top: 10px;
+        height: auto; 
+    }
+    
+  
+  
+    /*projekter*/
+
+    .projekter-title {
         text-align: center;
     }
+
 
     .left.project {
         display: flex;
         align-items: center;
-        justify-content: center; /* Sørger for, at elementerne centreret i containeren */
-        padding: 10px 0; /* Tilføjer lidt vertikal polstring til containeren */
+        justify-content: center; 
+        margin-right: 10px;
+        margin-bottom: 30px;
+
+    }
+
+    .project-text-left h3{
+        font-size: 50px;
+        margin-bottom: 15px;
     }
     
-    .surt-show {
-        height: 875px;
-        margin-right: 100px;
-    }
-    
-    .project-text.project-text-left {
-        max-width: 80%; /* Begrænser tekstdelens maksimale bredde */
-        text-align: left; /* Sikrer at teksten starter fra venstre kant af dens container */
-    }
+.project-text-left {
+        text-align: right;
+        font-size: 30px;
+        margin-bottom: 30px;
+        border-right: 3px solid #1400AE;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 60px;
+        margin-right: 30px;
+        }
+        
+        .surt-show {
+            height: 875px;
+            margin-right: 50px;
+        }
+
+        .right.project {
+            margin-left: 30px;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        
+        .project-text-right h3 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        
+        .project-text-right {
+            font-size: 30px;
+            border-left: 3px solid #1400AE;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 30px;
+        }
+        
+        .portræt {
+            height: 650px;
+            margin-bottom: 30px;
+            position: absolute;
+
+        }
+        
+      
+       
     
     
 
@@ -338,9 +412,6 @@ header .logo {
         margin-left:20px;
     }
 
-    .menu ul {
-        padding-left:0;
-    }
 
    .logo {
     height:70px !important;
@@ -377,10 +448,7 @@ header .logo {
     margin-right: 33px;
     margin-left: auto;
     margin-top: auto;
-    border-right: 3px solid #1400AE;
-    padding-right: 10px;
-    padding-top: 30px;
-    padding-bottom: 60px;
+   
     }
 
     .velkommen-tekst h1 {
@@ -418,8 +486,9 @@ header .logo {
 }
 
 /*hvem er jeg?*/ 
-.om-mig-text h3 {
-    text-align: left;
+.om-mig-text h2 {
+    text-align: center;
+    margin-left: 80px;
     font-size: 35px;
     color: #1400AE;
     margin-bottom: 30px;
@@ -432,7 +501,7 @@ header .logo {
     font-weight: 200px;
     line-height: 45px;
     color: #FFFBF9;
-    text-align:left;
+    text-align:center;
 }
 
 .om-mig-billede {
@@ -486,8 +555,8 @@ header .logo {
 }
 
 .mine-kompetencer {
-    margin-top: 100px;
-    padding-top: 10px;
+    margin-top: 80px;
+    padding-top: 5px;
     text-align: center;
     width: 100%;
     height: 200px;
@@ -498,33 +567,94 @@ header .logo {
      box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5); 
 }
 
-.mine-kompetencer h3 {
-    font-size: 25px;
+.mine-kompetencer h2 {
+    font-size: 22px;
     color: #1400AE;
 }
 
+/*kasserne til mine kompetencer*/
 .flex-item {
     margin: 10px; 
     background-color: #fffbf9a0; 
-    display: flex;
-    justify-content: center; 
     align-items: center; 
     border-radius: 10px;
+    height: 120px;
+  }
+/*overskrift i kasserne*/
+  .flex-item h3{
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
 
-  .projekter{
-    text-align:left;
-        font-size: 30px;
-        color: #1400AE;
-        margin-top: 50px;
-        margin-bottom: 30px;
-        margin-left: 200px;
-    }
+/*teksten i kasserne*/
+  .flex-item p{
+    font-size: 12px;
+    color: #1400AE;
+    padding-left: 5%;
+    padding-right: 5px;
+  }
 
+  .værktøjer-billeder img {
+    display: inline-block; 
+    margin-top:20px;
+    width: 35px;
+    height: auto; 
+}
 
+/*projkter*/
+
+.projekter-title  {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/*venstre projekter*/
+.left.project {
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.project-text-left  {
+    font-size: 17px;
+ 
+}
+.project-text-left h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.surt-show {
+    height: 475px;
+    margin-right: 50px;
+}
+/*højre projekter*/
+.right.project {
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.project-text-right {
+    font-size: 17px;
+}
+
+.project-text-right h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.portræt {
+    height: 350px;
+    margin-left: 250px;
+    margin-bottom: 30px;
+    
+}
 
 
 }
+
+
+
+
+
 
 
 
@@ -539,4 +669,6 @@ header .logo {
     font-weight: bold;
     color: #1400AE;
 }
+
+
 
