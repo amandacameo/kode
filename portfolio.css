@@ -197,8 +197,7 @@ header .logo {
 .om-mig-liste {
     width: 60%;
     margin-left:20%;
-    margin-right:20%;
-    padding-left: 50px;
+    padding-left: 150px;
     margin-top: 400px;
     line-height: 50px;
 }
@@ -309,13 +308,13 @@ border-radius: 20px;
         margin-top: 50px;
         margin-bottom: 30px;
     }
-
+/*venstre projekter web*/
     .left-project {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center; 
-        margin-right: 10px;
+        margin-right: 90px;
         margin-bottom: 30px;
     }
 
@@ -331,8 +330,9 @@ border-radius: 20px;
         border-right: 3px solid #1400AE;
         padding-right: 20px;
         padding-top: 20px;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
         margin-right: 30px;
+        margin-left: 200px;
         }
 
         .happy-hobby, .dating-app {
@@ -340,11 +340,11 @@ border-radius: 20px;
             margin-bottom: 30px;
             margin-right: 30px;
             border-radius: 0 100px 0 100px;
-            margin-left:30px;
+            margin-left:120px;
         }
-
+/*højre projekter web*/
         .right-project {
-            margin-left: 10px;
+            margin-left: 90px;
             margin-bottom: 30px;
             align-items: center;
             justify-content: center;
@@ -362,8 +362,9 @@ border-radius: 20px;
             border-left: 3px solid #1400AE;
             padding-left: 20px;
             padding-top: 20px;
-            padding-bottom: 60px;
+            padding-bottom: 30px;
             margin-left: 30px;
+            margin-right: 200px;
         }
         
         .pentool, .moving-art, .projekt2 {
@@ -371,7 +372,7 @@ border-radius: 20px;
             margin-bottom: 30px;
             margin-left: 30px;
             border-radius: 100px 0 100px 0;
-            margin-right:30px;
+            margin-right:120px;
         }
        
         .surt-show{
@@ -506,7 +507,7 @@ border-radius: 20px;
 
 /*selve listen*/
 .om-mig-liste {
-    width: 90%;
+    width: 80%;
     margin-left: 50px;
     margin-top: 150px;
     line-height: 30px;
@@ -600,6 +601,7 @@ border-radius: 20px;
     height: 300px;
     margin-right: 5px;
     border-radius: 0 50px 0 50px;
+    margin-left:30px;
 }
 .surt-show{
     height: 400px;
@@ -626,7 +628,8 @@ border-radius: 20px;
     height: 300px;
     margin-bottom: 30px;
     margin-left: 5px;
-    border-radius: 50px 0 50px 0
+    border-radius: 50px 0 50px 0;
+    margin-right:30px;
 }
 
 
