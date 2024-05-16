@@ -410,11 +410,12 @@ header .logo {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    margin-bottom: 400px;
 }
 
 .kontakt-info {
     margin-left: 150px;
-    margin-right: 150px;
+    margin-right: 50px;
     color: #1400AE;
     width: 40%;
 }
@@ -422,7 +423,6 @@ header .logo {
 .kontakt-info h2 {
     font-size: 35px;
     margin-bottom: 50px;
-    /* Adjusted for better spacing */
 }
 
 .kontakt-text {
@@ -432,7 +432,6 @@ header .logo {
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 30px;
-    /* Added for better spacing */
 }
 
 .kontakt-bokse {
@@ -442,7 +441,7 @@ header .logo {
 
 .email-boks,
 .mobil-boks {
-    background-color: #1400AE;
+    background-color: #9991FE;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -455,12 +454,10 @@ header .logo {
 }
 
 .email-form {
-    padding: 40px;
+    padding: 100px 60px;
     background-color: #1400AE;
     border-radius: 20px;
-    width: 80%;
-    margin-right: 150px;
-    /* Ensure space from the right */
+    margin-right: 100px;
 }
 
 .email-form form {
@@ -476,8 +473,8 @@ header .logo {
     background-color: #FFFBF9;
     color: #91B5FC;
     margin-bottom: 10px;
-    padding: 10px;
-    /* Ensure consistent padding */
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .email-form form input::placeholder,
@@ -495,13 +492,12 @@ header .logo {
     width: 150px;
     height: 40px;
     align-self: flex-end;
-    /* Align button to the right */
 }
 
 .email-form form button:hover {
-    background-color: #FF69B4;
-    /* Optional: add hover effect */
+    background-color: #9991FE;
 }
+
 
 
 
@@ -771,17 +767,62 @@ header .logo {
 
     /*kontakt*/
 
-    #kontakt-form {
-        margin-top: 150px;
+
+    #kontak {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* Tilføj denne hvis du vil have børn i en kolonne */
     }
 
+    #kontakt-form {
+        margin-top: 150px;
+        margin-bottom: 200px;
+        flex-direction: column;
 
+    }
 
     .kontakt-info h2 {
         font-size: 30px;
+        margin-bottom: 0;
+        text-align: center;
     }
 
+    .kontakt-info {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .kontakt-text {
+        margin-bottom: 10px;
+        font-size: 15px;
+        border-left: none;
+        text-align: center;
+    }
+
+    .kontakt-bokse {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .email-boks,
+    .mobil-boks {
+        margin-right: 10px;
+    }
+
+    .email-form {
+        padding: 40px;
+        width: 80%;
+    }
+
+
 }
+
+
 
 
 
