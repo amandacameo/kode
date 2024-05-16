@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 /* baggrund, størrelse og overgangseffekter for hele siden */
 body {
     background-color: #FFFBF9;
@@ -498,6 +499,51 @@ header .logo {
     background-color: #9991FE;
 }
 
+.footer {
+    position: relative;
+    width: 100%;
+}
+
+.logo-footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.logo-footer img {
+    width: 80px;
+}
+
+
+.some-ikoner {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.some-ikon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.some-ikon img {
+    margin-right: 20px;
+    width: 50px;
+}
+
+.some-ikon p {
+    color: #FFFBF9;
+}
+
+
 
 
 
@@ -819,8 +865,36 @@ header .logo {
         width: 80%;
     }
 
+    /*logo i footer*/
 
+    .logo-footer {
+        left: 90%;
+        transform: translate(-90%, -50%);
+    }
+
+    .logo-footer img {
+        width: 50px;
+    }
+
+    .some-ikoner {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .some-ikon img {
+        margin-right: 1px;
+        width: 40px;
+        margin-left: 15px;
+
+    }
+
+    .some-ikon p {
+        color: #FFFBF9;
+        font-size: 15px;
+    }
 }
+
+
 
 
 
