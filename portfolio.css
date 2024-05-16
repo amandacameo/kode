@@ -3,6 +3,9 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /* baggrund, størrelse og overgangseffekter for hele siden */
 body {
