@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Definerer baggrund, størrelse og overgangseffekter for hele siden */
+/* baggrund, størrelse og overgangseffekter for hele siden */
 body {
     background-color: #FFFBF9; /* Min bagrundsfarve*/
     margin: 0;
@@ -32,15 +32,6 @@ header {
     z-index: -1; /* Sikrer at billedet er bag alt andet indhold i containeren */
 }
 
-/* mit gradient design som flytter sig til ventre hjørne når den er i mobil størrelse */
-@media only screen and (max-width: 768px)  { 
-    .background-image {
-        object-position: top 0 left -90px; 
-        object-fit: cover;
-        
-    }
-}
-
 header .logo {
     height: 100px;
     width:auto; /* Justér højden efter behov */
@@ -48,59 +39,50 @@ header .logo {
     margin-left: 40px;
     }
 
-.menu {
-    margin-right: 10%;
-}
+    .menu {
+        margin-right: 10%;
+    }
+    /*min menu linje og logo som aligner*/
+    .header-container{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* Styler hvordan navigationslinksene vises, uden listepunkter og justeret til højre */
+    .menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* hvor meget mellemrum der er imellem hver */
+    .menu li {
+        margin-left: 40px;
+    }
+    .menu a {
+        text-decoration: none;
+        color: #1400AE;
+        font-size: 22px;
+        position: relative;
+    }
+    /* understregningsbar */
+    .menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left:0;
+        width: 0;
+        height: 5px;
+        background-color: #FFFBF9;
+        transition: width 0.3s ease-in-out;
+    }
+   
 
-/*min menu linje og logo som aligner*/
-.header-container{
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/* Styler hvordan navigationslinksene vises, uden listepunkter og justeret til højre */
-.menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* hvor meget mellemrum der er imellem hver */
-.menu li {
-    margin-left: 40px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #1400AE;
-    font-size: 22px;
-}
-
-/* Hover-effekt for navigation links: Skaber en understregningsbar der vises når linket hoveres over */
-.menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left:0;
-    width: 0;
-    height: 5px;
-    background-color: #FFFBF9;
-    transition: width 0.3s ease-in-out;
-}
-
-/* Farveændring ved hover: Holder linkets farve konsekvent ved hover */
-.menu a:hover {
-    color: #1400AE;
-}
-
-/* Glidende understregningseffekt ved hover */
-.menu a:hover::after {
-    width: 100%;
-}
+    .menu a:hover::after {
+        width: 100%;
+    }
+    
 
 .header-title { 
     margin-top: 100px;
@@ -307,14 +289,6 @@ border-radius: 20px;
     padding-right: 5px;
   }
 
-      /*overskrifter til bokse*/
-    .projekter{
-        font-size: 35px;
-        color: #1400AE;
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
     .værktøjer-billeder img {
         display: inline-block; 
         width: 120px;
@@ -329,7 +303,12 @@ border-radius: 20px;
     .projekter-title {
         text-align: center;
     }
-
+    .projekter{
+        font-size: 35px;
+        color: #1400AE;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
 
     .left-project {
         display: flex;
@@ -356,14 +335,12 @@ border-radius: 20px;
         margin-right: 30px;
         }
 
-        .surt-show, .happy-hobby, .dating-app {
+        .happy-hobby, .dating-app {
             height: 650px;
             margin-bottom: 30px;
             margin-right: 30px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 100px 0 100px 0;
-            padding-left: 40px;
+            border-radius: 0 100px 0 100px;
+            margin-left:30px;
         }
 
         .right-project {
@@ -393,12 +370,13 @@ border-radius: 20px;
             height: 650px;
             margin-bottom: 30px;
             margin-left: 30px;
-            position: relative;
-            overflow: hidden;
             border-radius: 100px 0 100px 0;
-            padding-right: 40px;
+            margin-right:30px;
         }
        
+        .surt-show{
+            height: 800px;
+        }
     
     
 
@@ -414,6 +392,10 @@ border-radius: 20px;
         margin-left:20px;
     }
 
+    .background-image {
+        object-position: top 0 left -90px; 
+        object-fit: cover;
+    }
 
    .logo {
     height:70px !important;
@@ -600,39 +582,51 @@ border-radius: 20px;
 
 /* Venstre projekter */
 .left-project {
-    margin-right: 10px;
-    margin-bottom: 30px;
+    margin-right: 1px;
+    margin-bottom: 10px;
 }
 .project-text-left  {
-    font-size: 17px;
+    font-size: 15px;
+    border-right: 2px solid #1400AE;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 30px;
 }
 .project-text-left h3{
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
-.surt-show, .happy-hobby, .dating-app {
-    height: 100%;
-    margin-right: 30px;
-    border-radius: 0 70px 0 70px;
-    margin-right: 50px;
+.happy-hobby, .dating-app {
+    height: 300px;
+    margin-right: 5px;
+    border-radius: 0 50px 0 50px;
+}
+.surt-show{
+    height: 400px;
+    margin-right: -30px;
 }
 
 /* Højre projekter */
 .right-project {
     margin-bottom: 30px;
-    margin-left: 10px;
+    margin-left: 1px;
 }
 .project-text-right {
-    font-size: 17px;
+    font-size: 15px;
+    border-left: 2px solid #1400AE;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 30px;
 }
 .project-text-right h3{
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 .pentool, .moving-art, .projekt2 {
-    height: 100%;
-    margin-right: 30px;
-    border-radius: 70px 0 70px 0;
+    height: 300px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    border-radius: 50px 0 50px 0
 }
 
 
