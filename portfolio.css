@@ -135,7 +135,7 @@ header .logo {
 }
 
 /*min titel "Velkommen til min portfolio! "*/
-.velkommen-tekst h1 {
+.velkommen-tekst h2 {
     margin-left: auto;
     margin-right: 0;
     margin-bottom: 60px;
@@ -450,11 +450,11 @@ header .logo {
     margin-bottom: 10px;
     border-radius: 10px;
     color: #FFFBF9;
-    margin-right: 350px;
+    margin-right: 400px;
 }
 
 .mobil-boks {
-    margin-right: 430px;
+    margin-right: 480px;
 }
 
 .email-form {
@@ -479,6 +479,7 @@ header .logo {
     margin-bottom: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-left: 15px;
 }
 
 .email-form form input::placeholder,
@@ -523,7 +524,7 @@ header .logo {
 .some-ikoner {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
     transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
@@ -546,13 +547,21 @@ header .logo {
     color: #FFFBF9;
 }
 
+.rettigheder p {
+    color: #FFFBF9;
+    position: absolute;
+    z-index: 1;
+    right: 5%;
+    top: 50%
+}
+
 
 
 
 
 
 /* Mobil størrelse indhold */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
 
     .menu a {
         font-size: 18px !important;
@@ -665,9 +674,7 @@ header .logo {
     .om-mig-billede img {
         width: 400px;
         height: 400px;
-        object-position: bottom 100px right 80px;
-        object-fit: cover;
-        transform: scale(1);
+
     }
 
     /*fjerner prikkerne*/
@@ -707,9 +714,7 @@ header .logo {
         text-align: center;
         width: 100%;
         height: 200px;
-        background-image: url("farve\ kasse.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
+
     }
 
     .mine-kompetencer h2 {
@@ -871,8 +876,8 @@ header .logo {
     /*logo i footer*/
 
     .logo-footer {
-        left: 90%;
-        transform: translate(-90%, -50%);
+        left: 50%;
+
     }
 
     .logo-footer img {
@@ -880,21 +885,26 @@ header .logo {
     }
 
     .some-ikoner {
-        display: flex;
-        flex-direction: row;
+        left: 2%;
+        margin-right: auto;
     }
 
     .some-ikon img {
-        margin-right: 1px;
-        width: 40px;
-        margin-left: 15px;
-
+        margin-right: 2px;
+        width: 25px;
     }
 
     .some-ikon p {
-        color: #FFFBF9;
-        font-size: 15px;
+        font-size: 12px;
     }
+
+    .rettigheder p {
+        font-size: 10px;
+
+
+    }
+
+
 }
 
 
