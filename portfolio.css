@@ -887,6 +887,7 @@ header .logo {
     .some-ikoner {
         left: 2%;
         margin-right: auto;
+        top: 40px;
     }
 
     .some-ikon img {
@@ -900,8 +901,9 @@ header .logo {
 
     .rettigheder p {
         font-size: 10px;
-
-
+        right: 2%;
+        width: 150px;
+        top: 20px;
     }
 
 
