@@ -185,7 +185,7 @@ header .logo {
 /*teksten*/
 .om-mig-text {
     font-size: 20px;
-    font-weight: 200px;
+    font-weight: 200;
     line-height: 45px;
     color: #FFFBF9;
 }
@@ -655,7 +655,6 @@ header .logo {
     /*teksten*/
     .om-mig-text {
         font-size: 20px;
-        font-weight: 200px;
         line-height: 45px;
         text-align: center;
     }
