@@ -193,21 +193,17 @@ header .logo {
 .om-mig-billede {
     z-index: 2;
     position: absolute;
-    left: 300px;
-    margin-top: -400px;
+    margin-left: -150px;
+    margin-top: -250px;
     overflow: hidden;
     width: 300px;
-    /* Øget fra 225px */
     height: 300px;
-    /* Øget fra 225px */
     border-radius: 50%;
 }
 
 .om-mig-billede img {
     width: 500px;
-    /* Øget fra 400px */
     height: 500px;
-    /* Øget fra 400px */
     object-position: bottom 100px right 80px;
     object-fit: cover;
     transform: scale(1);
@@ -504,17 +500,20 @@ header .logo {
 }
 
 .footer {
-    position: relative;
-    width: 100%;
+    background-image: url("Footer2.png");
+    background-size: cover;
 
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .logo-footer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-footer img {
@@ -523,13 +522,11 @@ header .logo {
 
 
 .some-ikoner {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 2%;
+    width: 33%
 }
 
 .some-ikon {
@@ -548,12 +545,17 @@ header .logo {
     color: #FFFBF9;
 }
 
+
+.rettigheder {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rettigheder p {
     color: #FFFBF9;
-    position: absolute;
-    z-index: 1;
-    right: 5%;
-    top: 50%
+    height: auto;
 }
 
 
@@ -564,13 +566,24 @@ header .logo {
 
 /* Mobil størrelse indhold */
 @media only screen and (max-width: 900px) {
+    .menu {
+        margin-right: 0;
+        width: 80%;
+    }
+
+    .menu ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     .menu a {
-        font-size: 16px !important;
+        font-size: 14px !important;
     }
 
     .menu li {
-        margin-left: 20px;
+        margin-left: 0;
     }
 
     .background-image {
@@ -588,7 +601,7 @@ header .logo {
         margin-left: 40px;
         width: 90%;
         margin-top: 80px;
-        margin-bottom: 150px;
+        margin-bottom: 75px;
     }
 
     /*Amanda cameo*/
@@ -607,8 +620,8 @@ header .logo {
 
     .velkommen-tekst {
         text-align: right;
-        width: 450px;
-        margin-right: 33px;
+        width: 85%;
+        margin-right: 3%;
         margin-left: auto;
         margin-top: auto;
 
@@ -629,52 +642,52 @@ header .logo {
         margin-left: auto;
         font-weight: 300;
         font-size: 15px;
-        width: 400px;
+        width: 85%;
     }
 
-    /*lilla kasse"*/
+    /*lilla kasse med tekst*/
     .om-mig-text {
         position: relative;
         top: 100px;
-        width: 500px;
+        width: 80%;
         border-radius: 15px;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 50px;
-        margin-left: 50px;
+        margin-left: 10%;
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
     }
 
     /*hvem er jeg?*/
     .om-mig-text h2 {
         text-align: center;
-        margin-left: 80px;
+        margin-left: 0;
         font-size: 35px;
         margin-bottom: 30px;
         padding-left: 0px;
     }
 
-    /*teksten*/
-    .om-mig-text {
-        font-size: 20px;
-        line-height: 45px;
-        text-align: center;
-    }
-
     .om-mig-billede {
         z-index: 2;
         position: absolute;
-        left: 10px;
-        margin-top: -830px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: -120px;
+        margin-top: 0;
         overflow: hidden;
-        width: 225px;
-        height: 225px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
     }
 
     .om-mig-billede img {
         width: 400px;
         height: 400px;
-
+        object-position: bottom 125px right 112.5px;
     }
 
     /*fjerner prikkerne*/
@@ -727,7 +740,7 @@ header .logo {
     .flex-item {
         margin: 10px;
         align-items: center;
-        border-radius: 10px;
+        border-radius: 30px;
         height: 150px;
         margin-bottom: 10px;
     }
@@ -768,7 +781,7 @@ header .logo {
     }
 
     .project-text-left {
-        font-size: 15px;
+        font-size: 13px;
         border-right: 2px solid #1400AE;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -782,14 +795,14 @@ header .logo {
 
     .happy-hobby,
     .dating-app {
-        height: 300px;
+        height: 225px;
         margin-right: 5px;
         border-radius: 0 50px 0 50px;
         margin-left: 30px;
     }
 
     .surt-show {
-        height: 400px;
+        height: 300px;
         margin-right: -30px;
     }
 
@@ -800,7 +813,7 @@ header .logo {
     }
 
     .project-text-right {
-        font-size: 15px;
+        font-size: 13px;
         border-left: 2px solid #1400AE;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -815,7 +828,7 @@ header .logo {
     .pentool,
     .moving-art,
     .projekt2 {
-        height: 300px;
+        height: 225px;
         margin-bottom: 30px;
         margin-left: 5px;
         border-radius: 50px 0 50px 0;
@@ -860,7 +873,7 @@ header .logo {
     }
 
     .kontakt-bokse {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
@@ -887,9 +900,9 @@ header .logo {
         width: 50px;
     }
 
-    .some-ikoner {
-        left: 2%;
-        margin-right: auto;
+    .footer {
+        height: 100px;
+        background-size: contain;
     }
 
     .some-ikon img {
@@ -906,6 +919,8 @@ header .logo {
         right: 2%;
         width: 150px;
         top: 20px;
+        bottom: 0;
+        position: unset;
     }
 
 
