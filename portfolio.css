@@ -252,6 +252,9 @@ header .logo {
     flex-direction: column;
     background-color: #fffbf9a0;
     border-radius: 20px;
+    width: 30%;
+    height: 100%;
+    padding-bottom: 20px;
 }
 
 
@@ -303,9 +306,15 @@ header .logo {
     padding-right: 5%;
 }
 
+.værktøjer-billeder {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
 .værktøjer-billeder img {
     display: inline-block;
-    width: 120px;
+    width: 80px;
     margin-top: 10px;
     height: auto;
 }
