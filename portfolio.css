@@ -10,14 +10,13 @@ html {
 /* baggrund, størrelse og overgangseffekter for hele siden */
 body {
     background-color: #FFFBF9;
-    /* Min bagrundsfarve*/
     margin: 0;
     padding: 0;
     height: 100vh;
     transition: transform 0.5s ease;
 }
 
-/* Indstiller bredden og padding for header-elementet */
+
 header {
     width: 100%;
     background-size: cover;
@@ -40,7 +39,6 @@ header {
 header .logo {
     height: 100px;
     width: auto;
-    /* Justér højden efter behov */
     margin-top: 40px;
     margin-left: 40px;
 }
@@ -612,24 +610,17 @@ header .logo {
     /*Amanda cameo*/
     .header-title h1 {
         font-size: 45px;
-        margin-right: auto;
     }
 
     /*Multimediedesigner*/
     .header-title h2 {
         font-size: 25px;
-        font-weight: 350;
-        margin-left: auto;
     }
-
 
     .velkommen-tekst {
         text-align: right;
         width: 85%;
         margin-right: 3%;
-        margin-left: auto;
-        margin-top: auto;
-
     }
 
     .velkommen-tekst h2 {
@@ -656,7 +647,6 @@ header .logo {
         position: relative;
         top: 100px;
         width: 80%;
-        border-radius: 15px;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 50px;
@@ -696,10 +686,6 @@ header .logo {
         object-position: bottom 125px right 112.5px;
     }
 
-    /*fjerner prikkerne*/
-    .om-mig-liste ul {
-        list-style-type: none;
-    }
 
     /*selve listen*/
     .om-mig-liste {
@@ -712,7 +698,6 @@ header .logo {
 
     .om-mig-liste li {
         font-size: 12px;
-        font-weight: 300;
     }
 
     /*pile*/
@@ -786,7 +771,6 @@ header .logo {
     /* Venstre projekter */
     .left-project {
         margin-right: 1px;
-        margin-bottom: 10px;
     }
 
     .project-text-left {
@@ -855,7 +839,7 @@ header .logo {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        /* Tilføj denne hvis du vil have børn i en kolonne */
+
     }
 
     #kontakt-form {
@@ -948,7 +932,7 @@ header .logo {
 
 
 
-/* Skrifttype stilarter: Sætter fonten og vægten for elementer med klassen .readex-pro */
+/* Skrifttype stilarter*/
 .readex-pro {
     font-family: "Readex Pro", sans-serif;
     font-weight: 300;
