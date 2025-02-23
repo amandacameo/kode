@@ -169,6 +169,7 @@ header .logo {
     z-index: 1;
     /* skygge rundt om hele boksen */
     box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5);
+    margin-bottom: 25%;
 }
 
 /*hvem er jeg?*/
@@ -207,115 +208,75 @@ header .logo {
     transform: scale(1);
 }
 
-/*selve listen*/
-.om-mig-liste {
-    width: 60%;
-    margin-left: 20%;
-    padding-left: 150px;
-    margin-top: 400px;
-    line-height: 50px;
-}
-
-/*fjerner prikkerne*/
-.om-mig-liste ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-.om-mig-liste li {
-    font-size: 25px;
-    color: #1400AE;
-    font-weight: 300;
-}
-
-.om-mig-liste li::before {
-    content: "";
-    border-color: transparent #FFB7FD;
-    border-style: solid;
-    border-width: 0.50em 0 0.50em 0.95em;
-    display: block;
-    height: 0;
-    width: 0;
-    left: -2em;
-    top: 1.5em;
-    position: relative;
-}
-
-
-/*mine kompetencer*/
-.flex-item {
+.text {
+    margin-bottom: 0%;
     display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-    flex-direction: column;
-    background-color: #fffbf9a0;
-    border-radius: 20px;
-    width: 30%;
-    height: 100%;
-    padding-bottom: 20px;
+    justify-content: center;
+    font-size: 17px;
+    color: #1400AE;
 }
 
+.værktøjer-billeder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Juster til center, så det bliver centreret */
+    margin: 40px 300px 10px 300px;
+    /* Juster marginer for korrekt afstand */
+    flex-wrap: wrap;
+    /* Tillad wrapping, så indholdet brydes til flere linjer, hvis nødvendigt */
+}
 
-/*mine kompetencer baggrunden*/
-.mine-kompetencer {
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    /* Kolonne retning, så teksten kommer under billedet */
+    align-items: center;
+    /* Centrer billedet og teksten horisontalt */
+    margin: 10px;
+    /* Afstand mellem hvert logo-text element */
+}
+
+.logo-text img {
+    width: 150px;
+    height: auto;
+}
+
+.logo-text p {
+    color: #1400AE;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#uddybende-text {
+    color: #1400AE;
+    margin: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 200px;
+}
+
+.projekt-kasse {
+    font-size: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 150px;
+    margin-top: 100px;
     text-align: center;
-    width: 100%;
-    height: 400px;
+    height: 300px;
     background-image: url("farve-kasse.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: 20%;
     /* skygge rundt om hele boksen */
     box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5);
 }
 
-.mine-kompetencer h2 {
-    font-size: 40px;
-    color: #1400AE;
-    margin-top: 10px;
-}
 
 
-.k-kasser {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
 
-
-/*overskrift i kasserne*/
-.flex-item h3 {
-    font-size: 30px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-/*teksten i kasserne*/
-.flex-item p {
-    font-size: 25px;
-    color: #1400AE;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.værktøjer-billeder {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-
-.værktøjer-billeder img {
-    display: inline-block;
-    width: 80px;
-    margin-top: 10px;
-    height: auto;
-}
 
 
 
@@ -506,7 +467,6 @@ header .logo {
 .footer {
     background-image: url("Footer2.png");
     background-size: cover;
-
     height: 150px;
     width: 100%;
     display: flex;
